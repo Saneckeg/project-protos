@@ -4,7 +4,9 @@ option go_package = "github.com/Saneckeg/project-protos/proto/task";
 
 message Task {
   uint32 id    = 1;
-  string title = 2;
+  uint32 user_id = 2;
+  string title = 3;
+  bool is_done = 4;
 }
 
 message CreateTaskRequest {
