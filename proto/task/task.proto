@@ -46,10 +46,19 @@ message DeleteTaskRequest{
   uint32 id = 1;
 }
 
+message ListTasksByUserRequest{
+  uint32 user_id = 1;
+}
+
+message ListTasksByUserResponse {
+  repeated Task task = 1;
+}
+
 service TaskService {
   rpc CreateTask (CreateTaskRequest) returns (CreateTaskResponse);
   rpc GetTask (GetTaskRequest) returns (GetTaskResponse);
   rpc ListTasks (ListTaskRequest) returns (ListTaskResponse);
+  rpc ListTasksByUser (ListTasksByUserRequest) returns (ListTasksByUserResponse);
   rpc UpdateTask (UpdateTaskRequest) returns (UpdateTaskResponse);
   rpc DeleteTask (DeleteTaskRequest) returns (DeleteTaskResponse);
 }
