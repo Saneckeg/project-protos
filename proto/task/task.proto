@@ -8,7 +8,8 @@ message Task {
 }
 
 message CreateTaskRequest {
-  string title = 1;
+  uint32 user_id = 1;
+  string title = 2;
 }
 message CreateTaskResponse {
   Task task = 1;
