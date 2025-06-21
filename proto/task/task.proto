@@ -10,6 +10,7 @@ message Task {
 message CreateTaskRequest {
   uint32 user_id = 1;
   string title = 2;
+  bool is_done = 3;
 }
 message CreateTaskResponse {
   Task task = 1;
